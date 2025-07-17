@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { validation } from "./utils/validation";
 import { login } from "../services/auth.service";
 
 const UserLogin = () => {
+  const navigate = useNavigate();
   const initialvalue = {
     email: "",
     password: "",
@@ -29,6 +30,9 @@ const UserLogin = () => {
         setError(result.msg);
       } else {
         alert(result.msg);
+        setTimeout(() => {
+          navigate("/dashboard");
+        }, 500);
         setError("");
         setformValue(initialvalue);
       }

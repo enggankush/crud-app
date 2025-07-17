@@ -42,6 +42,7 @@ export const updateProfile = (updatedData) => {
 
 export const logout = () => {
   localStorage.removeItem("currentUser");
+  alert("Current User is Logout");
 };
 
 export const reset = (data) => {
