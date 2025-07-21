@@ -47,3 +47,19 @@ p {
 span{
   color: #e15757;
 }
+
+.dashboard-wrapper {
+  padding: 30px;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-content {
+  margin-top: 20px;
+}
